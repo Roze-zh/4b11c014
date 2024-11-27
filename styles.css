@@ -1,0 +1,158 @@
+/* 全局 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header 設置 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Logo 樣式 */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 父容器 */
+.social-icons {
+    display: flex;
+    gap: 15px; /* 控制圖標間距 */
+}
+
+/* 包裹圖標的連結設置 */
+.icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px; /* 圓角 */
+}
+
+/* 圖標 */
+.icon {
+    width: 24px;
+    height: 24px;
+    transition: filter 0.3s ease; /* 過渡效果 */
+}
+
+/* 懸停圖標變色 */
+.icon-wrapper:hover .icon {
+    filter: invert(24%) sepia(96%) saturate(7462%) hue-rotate(-9deg) brightness(96%) contrast(107%);
+}
+
+
+/* 基本設置 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* 主題標題樣式 */
+main h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 圖片展示區的設置 */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    padding: 20px;
+}
+
+/* 卡片樣式 */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 圖片放大效果 */
+.card img.hover-effect {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* 設置過渡效果 */
+}
+
+.card img.hover-effect:hover {
+    transform: scale(1.05); /* 懸停圖片放大 */
+}
+
+/* 文字內容 */
+.card p {
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+    transition: color 0.3s ease; /* 文字變色過渡效果 */
+}
+
+/* 文字懸停變色 */
+.card:hover p {
+    color: red;
+}
+
+/* 特定樣式的文字 */
+.highlight {
+    font-weight: bold;
+}
+
+main h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 20px; 
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 圖片樣式 */
+.card img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card p {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
