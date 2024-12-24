@@ -1,0 +1,170 @@
+/* 全局樣式 */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #d3d3d3;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .device {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1150px;
+    height: 300px;
+    background-color: black;
+    border-radius: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  /* 左側警告區域 */
+  .exclamation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* 列表區域 */
+  .list-container {
+    width: 400px;
+    display: 300px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    border: 1px solid #444;
+  }
+  
+  .thumbnail {
+    width: 50px;
+    height: 50px;
+    background-color: #444;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+  }
+  
+  .info {
+    margin-left: 15px;
+    color: white;
+  }
+  
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffbf00;
+  }
+  
+  .details {
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  /* 播放器區域 */
+  .player-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+  }
+  
+  .screen {
+    width: 200px;
+    height: 200px;
+    background-color: #d3d3d3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 48px;
+    color: gray;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .control {
+    font-size: 24px;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .control-item:hover {
+    background-color: yellow;
+    color: black;
+  }
+  
+  
+  /* 右側按鈕 */
+  .home-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    border-radius: 50%;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .button-container {
+    position: relative; /* 父容器需設為相對定位 */
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f0f0; /* 背景色（可選） */
+  }
+  
+  .button-item {
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none; /* 移除超連結的底線 */
+    transition: background-color 0.3s;
+  }
+  .button-item:hover {
+    background-color: yellow;
+    color: black;
+  }
+  
+  

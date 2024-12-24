@@ -1,0 +1,139 @@
+/* 全局樣式 */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #d3d3d3;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* 外部容器 */
+.device {
+  display: flex;
+  justify-content: space-between; /* 左右空間分配 */
+  align-items: center; /* 垂直居中 */
+  background-color: black;
+  width: 1150px; /* 固定寬度 */
+  height: 300px; /* 固定高度 */
+  border-radius: 30px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 左側警告區域 */
+.exclamation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: rgb(227, 227, 225);
+  color: rgb(250, 42, 42);
+}
+/* 專屬樣式，僅適用於 special-button */
+.special-button {
+  background-color: blue; /* 初始背景顏色為藍色 */
+  color: yellow; /* 初始文字或圖標顏色為黃色 */
+}
+
+/* 右側天氣資訊區域 */
+/* 保持 SOS 和首頁按鈕位置不變 */
+.device {
+  position: relative;
+}
+
+.exclamation,
+.button-column {
+  position: absolute;
+  z-index: 2; /* 確保按鈕在天氣信息上方 */
+}
+
+/* 天氣預報容器 */
+.forecast {
+  display: flex;
+  justify-content: space-around; /* 等距分布 */
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 15px;
+  margin: auto;
+  max-width: 90%;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* 增加卡片效果 */
+}
+
+/* 單日天氣區塊 */
+.day-weather {
+  text-align: center;
+  font-size: 16px; /* 調整整體文字大小 */
+  flex: 1;
+  margin: 0 10px; /* 添加水平間距 */
+}
+
+/* 星期名稱 */
+.day {
+  font-weight: bold;
+  font-size: 20px; /* 加大星期字體 */
+  margin-bottom: 10px;
+}
+
+/* 天氣圖標 */
+.icon {
+  font-size: 40px; /* 增大天氣圖標 */
+  margin: 10px 0;
+}
+
+/* 紫外線等級 */
+.uv-level {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* 降雨量信息 */
+.rain-info {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* 溫度 */
+.temperature {
+  font-weight: bold;
+  font-size: 18px; /* 突出顯示溫度 */
+  margin-top: 10px;
+}
+
+/* 右側返回按鈕 */
+.button-column {
+  position: absolute;
+  right: 120px; /* 距離右邊 20px */
+  top: 50%; /* 垂直居中 */
+  transform: translateY(-50%); /* 修正垂直偏移 */
+  z-index: 2; /* 保持在內容之上 */
+  margin-left: -100px;
+}
+
+/* 返回按鈕樣式 */
+.button-item {
+  width: 50px;
+  height: 50px;
+  background-color: gray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none; /* 移除超連結的底線 */
+  transition: background-color 0.3s ease;
+}
+
+.button-item:hover {
+  background-color: yellow;
+  color: black;
+}

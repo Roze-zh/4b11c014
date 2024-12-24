@@ -1,0 +1,92 @@
+/* 全局樣式 */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #d3d3d3;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .device {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    width: 1150px;
+    height: 300px;
+    border-radius: 30px; /* 設置圓角，讓容器的四個角呈現圓弧形，半徑為 30px */
+    padding: 50px; /* 設置內邊距，容器內的內容與容器邊緣之間保持 50px 的距離 */
+    box-sizing: border-box;
+    position: relative;
+  }
+
+.container {
+    position: relative;
+    width: 1150px;
+    height: 300px;
+    background-color: #000000; /* 模擬背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sos-button {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .overlay {
+    position: fixed; /* 固定定位，視口為參考 */
+    top: 50%; /* 將頂部設置在視口的 50% */
+    left: 50%; /* 將左側設置在視口的 50% */
+    width: 1150px; /* 固定寬度 */
+    height: 300px; /* 固定高度 */
+    border-radius: 30px; /* 設置圓角，讓容器的四個角呈現圓弧形，半徑為 30px */
+padding: 0px; /* 設置內邊距，容器內的內容與容器邊緣之間保持 50px 的距離 */
+    background-color: rgba(0, 0, 0, 0.5); /* 黑色背景，50% 不透明 */
+    display: none; /* 預設隱藏 */
+    justify-content: center; /* 水平置中（內容） */
+    align-items: center; /* 垂直置中（內容） */
+    transform: translate(-50%, -50%); /* 修正位置，使容器中心對準視口中心 */
+    z-index: 9999; /* 確保顯示在最上層 */
+}
+
+  
+  .overlay-content {
+    text-align: center;
+    color: rgb(252, 3, 3);
+  }
+  
+  .overlay-content p {
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .action-button {
+    width: 120px; /* 增加寬度 */
+    height: 40px; /* 增加高度 */
+    margin: 5px;
+    background-color: gray;
+    color: white;
+    font-size: 35px; /* 增大字體 */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none; /* 移除底線 */
+    transition: background-color 0.3s;
+}
+
+.action-button:hover {
+    background-color: rgb(242, 28, 0);
+    color: black;
+}

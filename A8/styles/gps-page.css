@@ -1,0 +1,235 @@
+/* 全局樣式 */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #d3d3d3;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .device {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1150px;
+    height: 300px;
+    background-color: black;
+    border-radius: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  /* 左側警告區域 */
+  .exclamation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* 地圖區域 */
+  .map-container {
+    width: 250px;
+    height: 250px;
+    background-color: #1e1e1e;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+  }
+  
+  .map {
+    width: 90%;
+    height: 90%;
+    background-color: black;
+    position: relative;
+  }
+  
+  .gps-marker {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background-color: orange;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+  }
+  
+  /* 方位信息 */
+  .location-info {
+    color: white;
+    text-align: left;
+    margin-left: 20px;
+  }
+  
+  .location-info div {
+    margin: 5px 0;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  /* 指南針區域 */
+  /* 指南針外圓背景 */
+.compass-container {
+    width: 250px;
+    height: 250px;
+    background-color: #333; /* 修改為更深的灰色 */
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 添加陰影效果 */
+  }
+  
+  /* 指南針內圓 */
+  .compass {
+    width: 90%;
+    height: 90%;
+    background-color: #555; /* 修改為稍淺的灰色 */
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* 指南針箭頭 */
+  .compass-arrow {
+    position: absolute;
+    width: 2px; /* 修改箭頭寬度 */
+    height: 200px; /* 修改箭頭長度 */
+    background-color: #fff; /* 箭頭顏色改為白色 */
+    transform-origin: 100% 50%; /* x 軸在中間，y 軸距離頂部 25% */
+    transform: rotate(187deg); /* 旋轉至正確角度 */
+  }
+  /* 箭頭頂部（指向北） */
+.arrow-head {
+    position: absolute;
+    top: -10px; /* 偏移到箭頭的頂端 */
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: red; /* 顏色為紅色 */
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    transform: translateX(-50%);
+  }
+  
+  /* 箭頭尾部（指向南） */
+  .arrow-tail {
+    position: absolute;
+    bottom: -10px; /* 偏移到箭頭的尾部 */
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: blue; /* 顏色為藍色 */
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    transform: translateX(-50%) rotate(180deg); /* 翻轉方向 */
+  }
+  
+/* 尖頭箭頭尾部 */
+.compass-arrow::after {
+    content: '';
+    position: absolute;
+    top: 0; /* 將尖頭放置在箭頭的頂端 */
+    left: 50%; /* 水平居中 */
+    width: 15px; /* 三角形的寬度 */
+    height: 15px; /* 三角形的高度 */
+    background-color: #ccc; /* 尾部箭頭的顏色 */
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%); /* 定義三角形 */
+    transform: translateX(-50%); /* 修正三角形的位置 */
+  }
+  
+  /* 方位標籤 */
+  .direction {
+    position: absolute;
+    font-size: 14px; /* 修改字體大小 */
+    color: #aaa; /* 修改字體顏色 */
+  }
+  
+  .north {
+    top: 5px; /* 調整北標籤的位置 */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .south {
+    bottom: 5px; /* 調整南標籤的位置 */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .east {
+    right: 5px; /* 調整東標籤的位置 */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .west {
+    left: 5px; /* 調整西標籤的位置 */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .angle {
+    font-size: 20px; /* 修改文字大小 */
+    font-weight: bold; /* 加粗 */
+    color: white; /* 修改顏色 */
+    text-align: center; /* 確保文字內容居中 */
+    margin-top: 10px; /* 可選：文字與指南針的距離 */
+  }
+  
+  
+  
+  /* 右側按鈕 */
+  .home-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    border-radius: 50%;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .button-container {
+    position: relative; /* 父容器需設為相對定位 */
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f0f0; /* 背景色（可選） */
+  }
+  
+  .button-item {
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none; /* 移除超連結的底線 */
+    transition: background-color 0.3s;
+  }
+  .button-item:hover {
+    background-color: yellow;
+    color: black;
+  }
+  
+  

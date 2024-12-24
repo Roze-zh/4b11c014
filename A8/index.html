@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Layout</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main-page.css">
+</head>
+<body>
+  <div class="device">
+    <!-- 左側警告區域 -->
+    <div class="exclamation">
+      <a href="sos-page.html" class="button-item">sos</a>
+    </div>
+
+    <!-- 地圖區域 -->
+    <div class="gps-container">
+      <div class="gps-map">
+        <div class="marker"></div>
+      </div>
+    </div>
+
+    <div class="data">
+        <!-- 第一行數據框 -->
+        <div class="data-row">
+          <div class="data-box small">
+            <span class="number">124</span>
+            <span class="text">SYS/mmHG</span>
+          </div>
+          <div class="data-box small">
+            <span class="number">75</span>
+            <span class="text">DIA/mmHG</span>
+          </div>
+          <div class="data-box small">
+            <span class="number">64</span>
+            <span class="text">PULSE/min</span>
+          </div>
+        </div>
+        
+        <!-- 第二行到第四行數據框 -->
+        <div class="data-box medium">
+            <span class="text">MAX</span>
+          <span class="number">37.5°C</span>
+        </div>
+        <div class="data-box medium">
+            <span class="text">%SpO₂</span>
+          <span class="number">97</span>
+        </div>
+        <div class="data-box medium">
+            <span class="text">Cal</span>
+          <span class="number">1808</span>
+        </div>
+        
+        <!-- 步數框 -->
+        <div class="data-box highlight">
+          <span class="icon">🚶‍♂️</span>
+          <span class="number">20390</span>
+        </div>
+      </div>
+      
+
+    <!-- 媒體區域 -->
+    <div class="media">
+      <div class="media-header">
+        <span class="song-title">I Want You - J.Tajor</span>
+      </div>
+      <div class="media-controls">
+        <span class="control">🤍</span>
+        <span class="control">⏮</span>
+        <span class="control">▶</span>
+        <span class="control">⏭</span>
+        <span class="control">➕</span>
+      </div>
+      <div class="weather-info">
+        <span class="weather-item">⛅</span>
+        <span class="weather-item">💧40%</span>
+        <span class="weather-item">☀️0</span>
+      </div>
+      <div class="time-display">
+        <div class="time">01:00</div>
+        <div class="date">2024/03/07</div>
+      </div>
+    </div>
+
+    <!-- 右側按鈕列 -->
+    <div class="button-column">
+        <a href="weather-page.html" class="button-item">☀</a>
+        <a href="music-page.html" class="button-item">🎵</a>
+        <a href="gps-page.html" class="button-item">📍</a>
+      <a href="healthey-page.html" class="button-item">❤</a>
+    </div>
+  </div>
+</body>
+</html>

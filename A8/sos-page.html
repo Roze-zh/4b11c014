@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOS Example</title>
+  <link rel="stylesheet" href="styles/sos-page.css">
+</head>
+<body>
+    <div class="device">
+  <div class="container">
+    <button id="sos-button" class="sos-button">SOS</button>
+    <div id="overlay" class="overlay">
+      <div class="overlay-content">
+        <p>SOS</p>
+        <a href="index.html" class="action-button">YES</a>
+        <a href="index.html" class="action-button">NO</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // 取得 SOS 按鈕的元素
+    const sosButton = document.getElementById('sos-button');
+
+    // 取得覆蓋層的元素
+    const overlay = document.getElementById('overlay');
+
+    // 當 SOS 按鈕被點擊時，顯示覆蓋層
+    sosButton.addEventListener('click', () => {
+        overlay.style.display = 'flex'; // 設定覆蓋層為 flex 排列（顯示）
+    });
+
+    // 當使用者點擊覆蓋層時，檢查點擊是否發生在覆蓋層本身
+    overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) {
+            overlay.style.display = 'none'; // 隱藏覆蓋層
+        }
+    });
+</script>
+</body>
+</html>

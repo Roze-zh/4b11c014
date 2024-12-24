@@ -1,0 +1,217 @@
+/* 全局樣式 */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #d3d3d3;
+  font-family: 'Roboto', sans-serif;
+}
+
+.device {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  width: 1150px;
+  height: 300px;
+  border-radius: 30px;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* 左側警告區域 */
+.exclamation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: rgb(227, 227, 225);
+  color: rgb(250, 42, 42);
+}
+/* 專屬樣式，僅適用於 special-button */
+.special-button {
+  background-color: blue; /* 初始背景顏色為藍色 */
+  color: yellow; /* 初始文字或圖標顏色為黃色 */
+}
+
+
+/* 地圖區域 */
+.gps-container {
+  width: 250px;
+  height: 250px;
+  border: 5px solid white;
+  border-radius: 20px;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marker {
+  width: 20px;
+  height: 30px;
+  background-color: orange;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+/* 外層數據容器 */
+.data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* 右對齊 */
+  justify-content: center; /* 垂直居中 */
+  gap: 10px; /* 每個數據框的間距 */
+  width: 300px; /* 數據框區域固定寬度 */
+  margin-right: 50px; /* 與右側保持距離 */
+}
+
+/* 第一行數據框排列（水平三列） */
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  width: 100%; /* 撐滿數據容器寬度 */
+}
+
+/* 小型數據框 (SYS, DIA, PULSE) */
+.data-box.small {
+  width: 80px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d3d3d3;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 中型數據框（垂直排列） */
+.data-box.medium {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d3d3d3;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 突出顯示的步數框 */
+.data-box.highlight {
+  width: 85%; /* 撐滿行寬 */
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  border: 2px solid #fff; /* 白色邊框 */
+  padding: 0 20px;
+  border-radius: 10px;
+  font-size: 24px;
+}
+
+/* 圖標樣式 */
+.icon {
+  font-size: 24px; /* 圖標大小 */
+  color: white;
+}
+
+/* 數據文本樣式 */
+.text {
+  font-size: 15px;
+  color: #ffe700;
+  font-weight: bold;
+}
+
+.number {
+  font-size: 12px;
+  color: #555;
+  font-weight: bold;
+}
+
+/* 外部容器調整 */
+body {
+  display: flex;
+  justify-content: center; /* 居中整個設計 */
+  align-items: center;
+  height: 100vh; /* 垂直居中 */
+  margin: 0;
+  background-color: #e0e0e0; /* 背景灰色 */
+}
+
+/* 媒體區域 */
+.media {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 100%;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.media-header {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.media-controls {
+  display: flex;
+  justify-content: space-around;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.time-display {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* 按鈕列 */
+.button-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  gap: 20px;
+}
+
+.button-item {
+  width: 50px;
+  height: 50px;
+  background-color: gray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+   text-decoration: none; /* 移除超連結的底線 */
+  transition: background-color 0.3s;
+}
+
+.button-item:hover {
+  background-color: yellow;
+  color: black;
+}
+
